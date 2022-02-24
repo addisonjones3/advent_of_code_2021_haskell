@@ -29,7 +29,7 @@ sumWindowIncs windowSize readings = let currWindowSum = sumWindow (take windowSi
 main = do
         let day1Part1Answer = 1292 :: Int
         let day1Part2Answer = 1262 :: Int
-        handle <- openFile "day1.txt" ReadMode
+        handle <- openFile "day1input.txt" ReadMode
         content <- hGetContents handle
         let readings = rawReadingsToIntList content
 
