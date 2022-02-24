@@ -19,7 +19,7 @@ sumWindowIncs :: Int -> [Int] -> Int
 sumWindowIncs windowSize readings = let currWindowSum = sumWindow (take windowSize readings)
                                         nextWindowSum = sumWindow (take windowSize (tail readings))
                                      in 
-                                      if nextWindowSum < windowSize
+                                      if length nextWindowSum < windowSize
                                       then 0
                                       else
                                         if nextWindowSum > currWindowSum
